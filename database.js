@@ -1,5 +1,6 @@
+require('dotenv').config()
 const mongoose= require('mongoose')
-const url='mongodb+srv://Harthik:1234@cluster0.za9ck1n.mongodb.net/LibraryMngmt?retryWrites=true&w=majority'
+const url=process.env.connurl
 const connectdb= async()=>{
     try {
         mongoose.connect(url)
